@@ -1,6 +1,20 @@
 console.log(`Hello Node.js v${process.versions.node}!`);
 
-// IP FETCH
+// //DISTÂNCIA BACKUP
+
+// async function Rodar() {
+//   let axios = require('axios');
+//   // let cheerio = require('cheerio');
+//   let response = await axios.get('https://br.distanciacidades.net/'); //https://br.distanciacidades.net/calcular?from=santos&to=cubatao
+//   let data = response.data.data;
+//   let result = data[0];
+//   console.log(result);
+// }
+
+// console.log(Rodar());
+
+
+// // IP FETCH
 
 // const fetch = require('node-fetch');
 
@@ -9,9 +23,6 @@ console.log(`Hello Node.js v${process.versions.node}!`);
 //   const data = await response.json();
 // console.log(data.ip);
 // })();
-
-
-
 
 
 ////IP
@@ -27,35 +38,17 @@ async function myIP() {
 
 console.log(myIP());
 
-// //DISTÂNCIA
-
-// async function Rodar() {
-//   let axios = require('axios');
-//   // let cheerio = require('cheerio');
-//   let response = await axios.get('https://br.distanciacidades.net/'); //https://br.distanciacidades.net/calcular?from=santos&to=cubatao
-//   let data = response.data.data;
-//   let result = data[0];
-//   console.log(result);
-// }
-
-// console.log(Rodar());
 
 
+// DISTÂNCIA
 
-//DISTÂNCIA
-
-async function Rodar() {
+async function distance() {
   let axios = require('axios');
   // let cheerio = require('cheerio');
-  let response = await axios.get('https://br.distanciacidades.net/calcular?from=santos&to=cubatao');
-  let data = response.data.data.data;
-  let result = data[0];
+  let response = await axios.get('https://br.distanciacidades.net//calcular?from=santos&to=cubatao'); 
+  let data = response.data;
+  let result = data;
   console.log(result);
 }
 
-console.log(Rodar());
-
-
-
-
-
+console.log(distance());
